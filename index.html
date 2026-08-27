@@ -8,16 +8,16 @@
 
 <style>
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background: #111;
     color: white;
-    font-family: Arial, sans-serif;
     text-align: center;
-    margin: 0;
 }
 
 header {
     background: #050505;
-    padding: 25px;
+    padding: 30px 20px;
     border-bottom: 1px solid #444;
 }
 
@@ -26,61 +26,70 @@ h1 {
     font-size: 32px;
 }
 
+.subtitle {
+    color: #bbb;
+    margin-top: 10px;
+}
+
 .intro {
     padding: 30px 20px;
-    border-bottom: 1px solid #444;
+    color: #ddd;
+    max-width: 700px;
+    margin: auto;
 }
 
 .music-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    padding: 40px 20px;
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
 }
 
 .music-card {
     background: #1c1c1c;
-    width: 300px;
-    padding: 20px;
-    border-radius: 12px;
     border: 1px solid #444;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px;
 }
 
-.music-card img {
-    width: 100%;
-    border-radius: 8px;
+.music-card h2 {
+    margin-top: 0;
 }
 
 .price {
-    font-size: 24px;
+    color: #00ff88;
+    font-size: 28px;
     font-weight: bold;
-    color: #ffd700;
 }
 
 button {
-    padding: 12px 18px;
-    margin: 5px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.preview {
-    background: white;
-    color: black;
-}
-
-.buy {
-    background: #2ecc71;
+    background: #00a859;
     color: white;
+    border: none;
+    padding: 13px 20px;
+    margin: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #008f4c;
+}
+
+.buy-button {
+    background: #ff8c00;
+}
+
+.buy-button:hover {
+    background: #e67e00;
 }
 
 footer {
+    margin-top: 40px;
     padding: 25px;
-    border-top: 1px solid #444;
-    color: #aaa;
+    background: #050505;
+    color: #999;
 }
 </style>
 
@@ -89,116 +98,121 @@ footer {
 <body>
 
 <header>
-<h1>🎵 LHORKAN MUSIC STORE</h1>
+    <h1>🎵 LHORKAN MUSIC STORE</h1>
+    <p class="subtitle">Original Background Music</p>
 </header>
 
-<section class="intro">
-<h2>Original Background Music</h2>
-
-<p>
-Welcome to my digital music store!<br>
-Download original background music for your videos,
-vlogs and social media content.
-</p>
-</section>
-
-<h2>🔥 CHOOSE YOUR MUSIC</h2>
+<div class="intro">
+    <p>
+        Welcome to my digital music store!
+        Download original background music for your videos,
+        vlogs and social media content.
+    </p>
+</div>
 
 <div class="music-container">
 
-<!-- MUSIC 1 -->
-<div class="music-card">
+    <!-- MUSIC 1 -->
+    <div class="music-card">
+        <h2>🎵 Music 1</h2>
+        <p>Original Background Music</p>
 
-<h2>Vlog Background Music Vol. 1</h2>
+        <div class="price">₱150</div>
 
-<p>Original MP3 Background Music</p>
+        <audio id="music1">
+            <source src="preview1.mp3" type="audio/mpeg">
+        </audio>
 
-<p class="price">₱150</p>
+        <br>
 
-<audio controls>
-<source src="preview.mp3" type="audio/mpeg">
-</audio>
+        <button onclick="playMusic('music1')">
+            ▶ PREVIEW MUSIC
+        </button>
 
-<br>
-
-<a href="https://payhip.com/b/UPQ78" target="_blank">
-<button class="buy">🛒 BUY NOW</button>
-</a>
-
-</div>
-
-
-<!-- MUSIC 2 -->
-<div class="music-card">
-
-<h2>Background Music Vol. 2</h2>
-
-<p>Original Music</p>
-
-<p class="price">₱150</p>
-
-<audio controls>
-<source src="preview2.mp3" type="audio/mpeg">
-</audio>
-
-<br>
-
-<a href="#" target="_blank">
-<button class="buy">🛒 BUY NOW</button>
-</a>
-
-</div>
+        <a href="https://payhip.com/b/UPQ78" target="_blank">
+            <button class="buy-button">🛒 BUY NOW</button>
+        </a>
+    </div>
 
 
-<!-- MUSIC 3 -->
-<div class="music-card">
+    <!-- MUSIC 2 -->
+    <div class="music-card">
+        <h2>🎵 Music 2</h2>
+        <p>Original Background Music</p>
 
-<h2>Background Music Vol. 3</h2>
+        <div class="price">₱150</div>
 
-<p>Original Music</p>
+        <audio id="music2">
+            <source src="preview2.mp3" type="audio/mpeg">
+        </audio>
 
-<p class="price">₱150</p>
+        <br>
 
-<audio controls>
-<source src="preview3.mp3" type="audio/mpeg">
-</audio>
+        <button onclick="playMusic('music2')">
+            ▶ PREVIEW MUSIC
+        </button>
 
-<br>
-
-<a href="#" target="_blank">
-<button class="buy">🛒 BUY NOW</button>
-</a>
-
-</div>
+        <a href="https://payhip.com/b/dMrPl" target="_blank">
+            <button class="buy-button">🛒 BUY NOW</button>
+        </a>
+    </div>
 
 
-<!-- MUSIC 4 -->
-<div class="music-card">
+    <!-- MUSIC 3 -->
+    <div class="music-card">
+        <h2>🎵 Music 3</h2>
+        <p>Original Background Music</p>
 
-<h2>Hip-Hop Background Music</h2>
+        <div class="price">₱150</div>
 
-<p>Original Music</p>
+        <audio id="music3">
+            <source src="preview3.mp3" type="audio/mpeg">
+        </audio>
 
-<p class="price">₱150</p>
+        <br>
 
-<audio controls>
-<source src="preview4.mp3" type="audio/mpeg">
-</audio>
+        <button onclick="playMusic('music3')">
+            ▶ PREVIEW MUSIC
+        </button>
 
-<br>
-
-<a href="#" target="_blank">
-<button class="buy">🛒 BUY NOW</button>
-</a>
+        <a href="https://payhip.com/b/fMCPV" target="_blank">
+            <button class="buy-button">🛒 BUY NOW</button>
+        </a>
+    </div>
 
 </div>
 
-</div>
 
 <footer>
-<p>🎵 LHORKAN MUSIC STORE</p>
-<p>Original Music by LH</p>
+    © 2026 LHORKAN MUSIC STORE<br>
+    Original Music for Videos, Vlogs and Social Media
 </footer>
+
+
+<script>
+function playMusic(id) {
+
+    const selectedMusic = document.getElementById(id);
+
+    const allMusic = document.querySelectorAll("audio");
+
+    allMusic.forEach(function(music) {
+
+        if (music.id !== id) {
+            music.pause();
+            music.currentTime = 0;
+        }
+
+    });
+
+    if (selectedMusic.paused) {
+        selectedMusic.play();
+    } else {
+        selectedMusic.pause();
+    }
+
+}
+</script>
 
 </body>
 </html>
